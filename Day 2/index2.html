@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Day 2</title>
+    </head>
+    <body>
+        <input type="number" placeholder="Number 1" id="num1">
+        <input type="number" placeholder="Number 2" id="num2">
+        <button onclick="calculate()">Sum</button>
+        <p id="result"></p>
+
+        <script>
+            function calculate()
+            {
+                var n1 = parseInt(document.getElementById('num1').value);
+                var n2 = parseInt(document.getElementById('num2').value);
+                var sum = n1+n2;
+                document.getElementById('result').innerHTML = "The sum is " + sum;
+            }
+        </script>
+    </body>
+</html>

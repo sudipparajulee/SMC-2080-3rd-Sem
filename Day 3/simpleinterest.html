@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Simple Interest Calculator</title>
+        <style>
+            body{
+                font-family: sans-serif;
+            }
+            .myform{
+                width: 500px;
+                background-color: rgb(218, 225, 225);
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+                padding: 20px;
+                border-radius: 15px;
+            }
+
+            .myform h1{
+                text-align: center;
+            }
+
+            .myform input{
+                display: block;
+                width: 95%;
+                padding: 15px;
+                margin: 15px;
+                border: none;
+                border-radius: 10px;
+            }
+
+            .myform input:focus{
+                outline: 1px solid blue;
+            }
+
+            .myform button{
+                display: block;
+                width: 50%;
+                margin: auto;
+                background-color: blue;
+                color: white;
+                padding: 15px;
+                border: none;
+                border-radius: 15px;
+            }
+
+            #result{
+                text-align: center;
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="#" class="myform">
+            <h1>Simple Interest Calculator</h1>
+            <input type="number" placeholder="Enter Principal" id="principal">
+            <input type="number" placeholder="Enter Rate" id="rate">
+            <input type="number" placeholder="Enter Time in Years" id="time">
+            <button onclick="simpleInterest()">Calculate Interest</button>
+            <h2 id="result"></h2>
+        </form>
+
+        <script>
+            function simpleInterest()
+            {
+                var p = document.getElementById('principal').value;
+                var t = document.getElementById('time').value;
+                var r = document.getElementById('rate').value;
+
+                var si = p*t*r / 100;
+
+                document.getElementById('result').innerHTML = "The Simple Interest is " + si;
+            }
+        </script>
+    </body>
+</html>

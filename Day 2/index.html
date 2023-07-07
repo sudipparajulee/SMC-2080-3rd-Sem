@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Day 2</title>
+    </head>
+    <body>
+        <p id="mytext">Hello this is a paragraph</p>
+
+        <input type="number" id="mynum">
+        <button onclick="myFunction()">Click</button>
+
+
+        <script>
+            function myFunction()
+            {
+            var a = 2;
+            var b = 3;
+            var sum = a+b;
+
+            var result = "The sum of " +a + " and " + b + " is " + sum;
+            var num = document.getElementById('mynum').value;
+            document.getElementById('mynum').value = sum;
+            document.getElementById('mytext').innerHTML = num;
+            }
+        </script>
+    </body>
+</html>

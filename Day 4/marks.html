@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        .mydiv{
+            width: 60%;
+            background-color: rgb(210, 218, 218);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .mydiv input, .mydiv button{
+            display: block;
+            width: 95%;
+            padding: 10px;
+            border: none;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+
+        .mydiv button{
+            width: 40%;
+            background-color: blue;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<!-- Sudip Parajuli
+9855011559 -->
+
+<body>
+    <div class="mydiv">
+        <h1>Marks Calculator</h1>
+        <input type="text" placeholder="English Marks" id="english">
+    
+        <input type="text" placeholder="Science Marks" id="science">
+        <input type="text" placeholder="Math Marks" id="math">
+        <button onclick="calculate()">Calculate</button>
+        <h1 id="result"></h1>
+        <span id="warning"></span>
+    </div>
+    <script>
+        function calculate(){
+            var eng = document.getElementById('english').value;
+            var sci = document.getElementById('science').value;
+            var math = document.getElementById('math').value;
+
+            //check if the inputs are number
+            if(isNaN(eng) || isNaN(sci) || isNaN (math))
+            {
+                document.getElementById('result').innerHTML = "";
+                document.getElementById('warning').innerHTML = "* Invalid Number";
+                document.getElementById('warning').style.color = "red";
+                return;
+            }
+            else{
+                document.getElementById('warning').innerHTML = '';
+            }
+
+            //parse the values
+            eng = parseFloat(eng);
+            sci = parseFloat(sci);
+            math = parseFloat(math);
+
+            //percentage calculate
+            var per = (eng + sci + math)/300*100;
+            
+            //show result
+            document.getElementById('result').innerHTML = "The percentage is "+per.toFixed(2) + '%';
+            
+        }
+    </script>
+</body>
+</html>
