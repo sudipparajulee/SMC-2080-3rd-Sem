@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+
+        .upper{
+            display: flex;
+            justify-content: space-between;
+            background-color: aliceblue;
+        }
+
+        .upper span{
+            font-weight: bold;
+            font-size: 20px;
+            border: 2px solid black;
+            padding: 10px;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .upper img{
+            width: 100px;
+        }
+
+        .menu{
+            display: none;
+        }
+
+        .menu a{
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="upper">
+            <img src="https://bitmapitsolution.com/images/logo/logo.png" alt="">
+            <span onclick="showHideMenu()" class="icon">&equals;</span>
+        </div>
+        <div class="menu" id="menu">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+            <a href="">Login</a>
+        </div>
+    </nav>
+
+    <button onclick="hideshow()">Hide/Show</button>
+    <!-- <button onclick="show()">Show</button> -->
+    <div id="mydiv">
+        <h1>this div is displaying some content</h1>
+    </div>
+
+    <script>
+        function hideshow(){
+            var mydiv = document.getElementById('mydiv');
+            if(mydiv.style.display != 'none')
+            {
+                mydiv.style.display = 'none';
+            }
+            else
+            {
+                mydiv.style.display = 'block';
+            }
+        }
+
+        // function show(){
+        //     document.getElementById('mydiv').style.display = 'block';
+        // }
+
+        function showHideMenu()
+        {
+            var menu = document.getElementById('menu');
+            if(menu.style.display != "block")
+            {
+                menu.style.display = 'block';
+            }
+            else
+            {
+                menu.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
