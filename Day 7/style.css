@@ -1,0 +1,35 @@
+.nav{
+    background-color: blue;
+    text-align: right;
+    padding: 10px;
+}
+
+.nav li{
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    background-color: red;
+    padding: 0;
+    top: 30px;
+    left: 0;
+    width: 100px;
+}
+
+.dropdown li{
+    display: block;
+}
+
+.nav li:hover .dropdown{
+    display: block;
+}
