@@ -10,8 +10,8 @@
     <ul class="nav">
         <li><a href="">Home</a></li>
         <li><a href="">About</a></li>
-        <li><a href="">Services</a>
-            <ul class="dropdown">
+        <li onclick="dropdown()"><a>Services</a>
+            <ul id="dropdown" class="dropdown">
                 <li><a href="">Service 1</a></li>
                 <li><a href="">Service 2</a></li>
                 <li><a href="">Service 3</a></li>
@@ -20,5 +20,17 @@
         <li><a href="">Contact</a></li>
         <li><a href="">Login</a></li>
     </ul>
+    <script>
+        function dropdown(){
+            if(document.getElementById('dropdown').style.display != 'block')
+            {
+                document.getElementById('dropdown').style.display = 'block';
+            }
+            else
+            {
+                document.getElementById('dropdown').style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
